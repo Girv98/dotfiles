@@ -1,0 +1,52 @@
+#Aliases for Zsh
+
+### Grep
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+
+### Git
+alias ga="git add"
+alias gp="git push"
+alias gm="git commit"
+
+### List
+alias lla="ls -la --color=auto --group-directories-first"
+alias ll="ls -l --color=auto --group-directories-first"
+alias lha="ls -ha --color=auto --group-directories-first"
+alias lh="ls -h --color=auto --group-directories-first"
+
+### Configs
+alias dfc="code $HOME/dotfiles/"
+alias confc="code $HOME/.config"
+alias alc="code $HOME/.config/zsh/aliases.txt"
+alias zshc="code $HOME/.zshrc"
+alias i3c="code $HOME/.config/i3/config"
+alias polyc="code $HOME/.config/polybar/config.ini"
+alias rofic="code $HOME/.config/rofi/config.rasi"
+alias kittyc="code $HOME/.config/kitty/kitty.conf"
+alias nvc="code $HOME/.config/nvim/init.lua"
+
+### Navigation
+alias ~="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
+
+### Power
+alias sus="systemctl suspend"
+
+### Pacman
+alias sps="sudo pacman -S"
+alias pss"pacman -Ss"
+alias spsup="sudo pacman -Syu"
+
+### Misc
+alias cl="clear"
+alias nv="nvim"
+alias nv.="nvim ."
+alias c="code"
+alias c.="code ."
+
