@@ -23,7 +23,9 @@ TODO: Wallpaper
 │   │   ├── config.ini
 │   │   └── launch.sh
 │   ├── rofi/
-│   │   └── TODO
+│   │   ├── themes
+│   │   │   └── squared-everforest.rasi
+│   │   └── config.rasi
 │   └── zsh/
 │       ├── aliases.txt
 │   	└── (zsh-syntax-highlighting)
