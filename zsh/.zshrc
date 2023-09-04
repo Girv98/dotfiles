@@ -77,3 +77,6 @@ PROMPT=$'\n%n %{$oxide_limegreen%}%~%{$oxide_reset_color%} ${vcs_info_msg_0_}\n%
 
 
 neofetch
+
+# opam configuration
+[[ ! -r /home/girv/.opam/opam-init/init.zsh ]] || source /home/girv/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
