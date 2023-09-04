@@ -34,6 +34,29 @@ alias ...="cd ../.."
 alias .3="cd ../../.."
 alias .4="cd ../../../.."
 alias .5="cd ../../../../.."
+### alias cd "$(find -maxdepth 4 -name init.lua -type f -printf '%h\n')"
+
+findname() {
+    if [ -n "$2" ]
+    then
+        find -maxdepth $2 -name $1 -type f
+    else
+        find -maxdepth 4 -name $1 -type f
+    fi
+}
+
+finddir() {
+    if [ -n "$2" ]
+    then
+        dirname "$(find -maxdepth $2 -type f -name $1)"
+    else
+        dirname "$(find -maxdepth 4 -type f -name $1)"
+    fi
+}
+
+goto() {
+    cd "$(find -maxdepth 4 -name $1 -type f -printf '%h\n' -quit)"
+}
 
 ### Power
 alias sus="systemctl suspend"
