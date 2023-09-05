@@ -17,7 +17,7 @@ alias lha="ls -ha --color=auto --group-directories-first"
 alias lh="ls -h --color=auto --group-directories-first"
 
 ### Configs
-alias c-dot="code $HOME/dotfiles/"
+alias c-dot="code $HOME/.dotfiles"
 alias c-conf="code $HOME/.config"
 alias c-alias="code $HOME/.config/zsh/aliases.txt"
 alias c-zsh="code $HOME/.zshrc"
