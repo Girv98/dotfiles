@@ -9,14 +9,15 @@ TODO: Wallpaper
 ```
 ~/
 ├── .config/
-│   ├── htop/
-│   │   └── TODO
 │   ├── i3/
 │   │   └── TODO
 │   ├── kitty/
 │   │   └── kitty.conf
 │   ├── neofetch/
 │   │   └── TODO
+│   ├── nvim/
+│   │   └── init.lua
+│   │   └── lazy-lock.json 
 │   ├── picom/
 │   │   └── TODO 
 │   ├── polybar/
@@ -36,13 +37,20 @@ TODO: Wallpaper
 └── .zshrc
 ```
 
-### Programs/Packages needed 
+### Programs/Packages Needed 
 
-- i3
-- polybar
 - feh
-- picom
+- i3
 - kitty
+- nvim
+- picom
+- polybar
 - rofi
 - zsh
     - zsh-syntax-highlighting
+
+### Fonts Needed
+
+- JetBrainsMono Nerd Font
+- Iosevka 
+- Sarasa Mono
