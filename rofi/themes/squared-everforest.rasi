@@ -47,11 +47,11 @@ configuration {
     }
 
     ssh {
-        display-name: "";
+        display-name: "󰌘";
     }
 
     filebrowser {
-        display-name: "";
+        display-name: "";
     }
 
     emoji {
@@ -59,7 +59,7 @@ configuration {
     }
 
     calc {
-        display-name: "";
+        display-name: "";
     }
 }
 

@@ -5,10 +5,11 @@ configuration {
     width: 900;
     lines: 15;
     font: "JetBrainsMono Nerd Font Medium 11";
-    modi: "window,run,drun,emoji";
+    modi: "window,run,drun,calc,emoji";
     show-icons: true;
     icon-theme: "Papirus";
     terminal: "kitty";
+    sort: true;
     levenschtein-sort: true;
     matching: "fuzzy";
 }
