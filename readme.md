@@ -5,7 +5,7 @@ My current Arch-i3 configuration. Colours based on [Everforest](https://github.c
 
 ## Information
 
-<!-- <img src="" align="right" width="400px"> -->
+<img src="rice.png" align="right" width="400px">
 
 - **OS:** [Arch Linux](https://archlinux.org)
 - **WM:** [i3-gaps (Now merged with i3)](https://github.com/Airblader/i3)
@@ -14,7 +14,7 @@ My current Arch-i3 configuration. Colours based on [Everforest](https://github.c
 - **Shell:** [zsh](https://www.zsh.org/)
 - **Compositor:** [picom](https://github.com/yshui/picom)
 - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
-<!-- - **Notification Deamon:** [dunst](https://github.com/dunst-project/dunst) -->
+- **Notification Deamon:** [dunst](https://github.com/dunst-project/dunst)
 
 
 ## Installation
