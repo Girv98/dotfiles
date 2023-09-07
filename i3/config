@@ -200,7 +200,7 @@ mode "resize" {
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
-
+ 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -215,6 +215,7 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
+exec_always dunst &
 exec_always ~/.config/polybar/launch.sh &
 exec_always feh --bg-fill ~/Pictures/walls/forest_stairs.jpg
 exec_always picom
