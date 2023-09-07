@@ -1,6 +1,6 @@
 # Girv's Dotfiles
 
-My current Arch-i3 configuration. Colours based on [Everforest](https://github.com/sainnhe/everforest) theme for Vim.
+My current (work in progress) Arch-i3 configuration. Colours based on [Everforest](https://github.com/sainnhe/everforest) theme for Vim.
 
 
 ## Information
@@ -24,6 +24,8 @@ My current Arch-i3 configuration. Colours based on [Everforest](https://github.c
 ```
 ~/
 ├── .config/
+│   ├── dunst/
+│   │   └── dunstrc
 │   ├── i3/
 │   │   └── config
 │   ├── kitty/
@@ -47,23 +49,26 @@ My current Arch-i3 configuration. Colours based on [Everforest](https://github.c
 │   └── bin
 │       └── powermenu
 ├── .bashrc
+├── .xinitrc
 └── .zshrc
 ```
 
 ### Programs/Packages Needed 
 
-- feh
+- Dunst
+- Feh
 - i3
-- kitty
-- nvim
-- picom
-- polybar
-- rofi
-- zsh
+- Kitty
+- Network Manager
+- Nvim
+- Picom
+- Polybar
+- Rofi
+- Zsh
     - zsh-syntax-highlighting
 
 ### Fonts Needed
 
 - JetBrainsMono Nerd Font
-- Iosevka 
-- Sarasa Mono
+- Iosevka
+- Sarasa Mono (for CJK)
