@@ -49,12 +49,14 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 │   └── bin
 │       └── powermenu
 ├── .bashrc
+├── betterlockscreenrc
 ├── .xinitrc
 └── .zshrc
 ```
 
 ### Programs/Packages Needed 
 
+- Betterlockscreen
 - Dunst
 - Feh
 - i3
