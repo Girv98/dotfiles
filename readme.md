@@ -5,7 +5,7 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 
 ## Information
 
-<img src="rice.png" align="right" width="400px">
+<img src="screenshots/rice.png" align="right" width="400px">
 
 - **OS:** [Arch Linux](https://archlinux.org)
 - **WM:** [i3-gaps (Now merged with i3)](https://github.com/Airblader/i3)
@@ -49,7 +49,7 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 │   └── bin
 │       └── powermenu
 ├── .bashrc
-├── betterlockscreenrc
+├──  betterlockscreenrc
 ├── .xinitrc
 └── .zshrc
 ```
@@ -69,8 +69,8 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 - Zsh
     - zsh-syntax-highlighting
 
-### Fonts Needed
+### Fonts
 
 - JetBrainsMono Nerd Font
-- Iosevka
-- Sarasa Mono (for CJK)
+- Iosevka Extended (Fallback Font)
+- Sarasa Mono (for CJK support)
