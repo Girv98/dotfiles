@@ -306,6 +306,13 @@ require('telescope').setup {
   },
 }
 
+-- Remaps Ctrl+u/Ctrl+d to vertically center cursor 
+vim.keymap.set('n','<C-u>', '<C-u>zz', {})
+vim.keymap.set('n','<C-d>', '<C-d>zz', {})
+
+-- So there will always more than 8 lines visible above/below the cursor
+vim.opt.scrolloff = 8
+
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
