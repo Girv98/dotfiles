@@ -5,7 +5,7 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 
 ## Information
 
-<img src="screenshots/rice.png" align="right" width="400px">
+<img src="screenshots/rice.png" align="right" width="420px">
 
 - **OS:** [Arch Linux](https://archlinux.org)
 - **WM:** [i3-gaps (Now merged with i3)](https://github.com/Airblader/i3)
@@ -13,6 +13,7 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 - **Bar:** [polybar](https://github.com/polybar/polybar)
 - **Shell:** [zsh](https://www.zsh.org/)
 - **Compositor:** [picom](https://github.com/yshui/picom)
+- **Editor:** [Neovim](https://github.com/neovim/neovim) / [VSCode](https://github.com/microsoft/vscode)
 - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
 - **Notification Deamon:** [dunst](https://github.com/dunst-project/dunst)
 
@@ -42,14 +43,15 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 │   │   ├── themes
 │   │   │   └── squared-everforest.rasi
 │   │   └── config.rasi
-│   └── zsh/
-│       ├── aliases.txt
-│   	└── (zsh-syntax-highlighting)
+│   ├── zsh/
+│   │   ├── aliases.txt
+│   │   └── (zsh-syntax-highlighting)
+│   └── betterlockscreenrc
 ├── .local
 │   └── bin
-│       └── powermenu
+│       ├── powermenu
+│       └── wifimenu
 ├── .bashrc
-├──  betterlockscreenrc
 ├── .xinitrc
 └── .zshrc
 ```
@@ -58,13 +60,16 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 
 - Betterlockscreen
 - Dunst
+- ImageMagick
 - Feh
 - i3
 - Kitty
 - Network Manager
 - Nvim
 - Picom
+- Pipewire
 - Polybar
+- Ranger (Optional)
 - Rofi
 - Zsh
     - zsh-syntax-highlighting
