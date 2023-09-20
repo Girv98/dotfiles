@@ -60,6 +60,7 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 
 - Betterlockscreen
 - Dunst
+- Expac (see zsh aliases)
 - ImageMagick
 - Feh
 - i3
