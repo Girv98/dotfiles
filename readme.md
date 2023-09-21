@@ -51,7 +51,6 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 │   └── bin
 │       ├── powermenu
 │       └── wifimenu
-├── .bashrc
 ├── .xinitrc
 └── .zshrc
 ```
