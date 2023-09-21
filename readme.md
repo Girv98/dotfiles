@@ -64,7 +64,7 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 - Feh
 - i3
 - Kitty
-- Network Manager
+- Network Manager (For WifiMenu)
 - Nvim
 - Picom
 - Pipewire
