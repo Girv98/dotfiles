@@ -73,7 +73,7 @@ alias sus="systemctl suspend"
 
 ### Pacman
 alias sps="sudo pacman -S"
-alias pss"pacman -Ss"
+alias pss="pacman -Ss"
 alias sysup="sudo pacman -Syu"
 
 ### Misc
