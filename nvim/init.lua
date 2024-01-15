@@ -336,8 +336,8 @@ require('telescope').setup {
 vim.keymap.set('n','<C-u>', '<C-u>zz', {})
 vim.keymap.set('n','<C-d>', '<C-d>zz', {})
 
--- So there will always more than 8 lines visible above/below the cursor
-vim.opt.scrolloff = 8
+-- So there will always more than 10 lines visible above/below the cursor
+vim.opt.scrolloff = 10
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
