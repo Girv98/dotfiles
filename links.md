@@ -11,7 +11,7 @@ ln -s ~/.dotfiles/rofi/ ~/.config/
 ln -s ~/.dotfiles/zsh/aliases.txt ~/.config/zsh/aliases.txt
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 
-ln -s ~/.dotfiles/.xinitrc ~/.xinitrc
+#ln -s ~/.dotfiles/.xinitrc ~/.xinitrc
 
 ln -s ~/.dotfiles/betterlockscreen/betterlockscreenrc ~/.config/betterlockscreenrc
 

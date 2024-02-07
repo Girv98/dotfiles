@@ -32,7 +32,11 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 │   ├── kitty/
 │   │   └── kitty.conf
 │   ├── nvim/
-│   │   └── init.lua
+│   │   ├── plugins
+│   │   │   └── ...
+│   │   ├── themes
+│   │   │   └── ...
+│   │   ├── init.lua
 │   │   └── lazy-lock.json 
 │   ├── picom/
 │   │   └── TODO 
