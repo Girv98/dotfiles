@@ -17,7 +17,7 @@ font pango:JetbrainsMono Nerd Font 12
 
 # Gap Size
 gaps inner 12
-gaps outer 5
+gaps outer 6
 
 # Hide Title Bar
 for_window [class="^.*"] border pixel 3
