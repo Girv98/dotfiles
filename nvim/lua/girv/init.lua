@@ -245,5 +245,38 @@ cmp.setup {
   },
 }
 
+-- Window Movement
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+
+-- Window Resize
+vim.keymap.set('n', '<C-Up>',    ':resize -2<CR>',          { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Down>',  ':resize +2<CR>',          { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Left>',  ':vertical resize -2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', { noremap = true, silent = true })
+
+-- Block Movement (May not work with undotree)
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {})
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {})
+
+-- Indenting
+vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
+vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
+
+-- Bufferline 
+vim.keymap.set('n', '<TAB>',      ':bn<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<S-TAB>',    ':bp<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true }) -- from Doom Emacs
+
+-- Join next line with current line, keeping the cursor position
+-- e.g. foo      -> foo.bar()
+--        .bar() -> 
+vim.keymap.set('n', 'J', 'mzJ`z')
+
+
+
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
