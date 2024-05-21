@@ -197,53 +197,6 @@ mason_lspconfig.setup_handlers {
     }
   end
 }
--- [[ Configure nvim-cmp ]]
--- See `:help cmp`
-local cmp = require 'cmp'
-local luasnip = require 'luasnip'
-require('luasnip.loaders.from_vscode').lazy_load()
-luasnip.config.setup {}
-
-cmp.setup {
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
-  },
-  mapping = cmp.mapping.preset.insert {
-    ['<C-n>'] = cmp.mapping.select_next_item(),
-    ['<C-p>'] = cmp.mapping.select_prev_item(),
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete {},
-    ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    },
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_locally_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.locally_jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-  },
-  sources = {
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-  },
-}
 
 -- Window Movement
 vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
@@ -252,9 +205,9 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 
 -- Window Resize
-vim.keymap.set('n', '<C-Up>',    ':resize -2<CR>',          { noremap = true, silent = true })
-vim.keymap.set('n', '<C-Down>',  ':resize +2<CR>',          { noremap = true, silent = true })
-vim.keymap.set('n', '<C-Left>',  ':vertical resize -2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', { noremap = true, silent = true })
 
 -- Block Movement (May not work with undotree)
@@ -265,14 +218,14 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {})
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 
--- Bufferline 
-vim.keymap.set('n', '<TAB>',      ':bn<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<S-TAB>',    ':bp<CR>', { noremap = true, silent = true })
+-- Bufferline
+vim.keymap.set('n', '<TAB>', ':bn<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<S-TAB>', ':bp<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true }) -- from Doom Emacs
 
 -- Join next line with current line, keeping the cursor position
 -- e.g. foo      -> foo.bar()
---        .bar() -> 
+--        .bar() ->
 vim.keymap.set('n', 'J', 'mzJ`z')
 
 
