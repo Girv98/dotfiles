@@ -78,8 +78,14 @@ alias pss="pacman -Ss"
 alias sysup="sudo pacman -Syu"
 alias packclean="paccache -rk 1"
 
+longup() {
+    sudo pacman -Sc
+    sudo pacman -Sy archlinux-keyring
+    sudo pacman -Syu
+}
+
 ### List installed pacman packages sorted by size
-alias pacs="expac -s \"%-30n %m\" | sort -rhk 2 | less"
+alias packs="expac -s \"%-30n %m\" | sort -rhk 2 | less"
 
 ### Misc
 alias cl="clear"
