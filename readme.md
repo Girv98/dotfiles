@@ -24,30 +24,30 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 ### Target Structure
 ```
 ~/
-├── .config/
-│   ├── dunst/
+├── .config
+│   ├── dunst
 │   │   └── dunstrc
-│   ├── i3/
+│   ├── i3
 │   │   └── config
-│   ├── kitty/
+│   ├── kitty
 │   │   └── kitty.conf
-│   ├── nvim/
+│   ├── nvim
 │   │   ├── plugins
 │   │   │   └── ...
 │   │   ├── themes
 │   │   │   └── ...
 │   │   ├── init.lua
 │   │   └── lazy-lock.json 
-│   ├── picom/
-│   │   └── TODO 
-│   ├── polybar/
+│   ├── picom
+│   │   └── picom.conf
+│   ├── polybar
 │   │   ├── config.ini
 │   │   └── launch.sh
-│   ├── rofi/
+│   ├── rofi
 │   │   ├── themes
 │   │   │   └── squared-everforest.rasi
 │   │   └── config.rasi
-│   ├── zsh/
+│   ├── zsh
 │   │   ├── aliases.txt
 │   │   └── (zsh-syntax-highlighting)
 │   └── betterlockscreenrc
@@ -68,7 +68,7 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 - Feh
 - i3
 - Kitty
-- Network Manager (For WifiMenu)
+- Network Manager
 - Nvim
 - Picom
 - Pipewire
@@ -81,5 +81,4 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 ### Fonts
 
 - JetBrainsMono Nerd Font
-- Iosevka Extended (Fallback Font)
-- Sarasa Mono (for CJK support)
+- Sarasa Mono (Fallback with CJK support)
