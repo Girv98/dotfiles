@@ -7,11 +7,10 @@ ln -s ~/.dotfiles/kitty/ ~/.config/
 ln -s ~/.dotfiles/nvim/ ~/.config/
 ln -s ~/.dotfiles/polybar/ ~/.config/
 ln -s ~/.dotfiles/rofi/ ~/.config/
+ln -s ~/.dotfiles/picom/ ~/.config/
 
 ln -s ~/.dotfiles/zsh/aliases.txt ~/.config/zsh/aliases.txt
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-
-#ln -s ~/.dotfiles/.xinitrc ~/.xinitrc
 
 ln -s ~/.dotfiles/betterlockscreen/betterlockscreenrc ~/.config/betterlockscreenrc
 

@@ -55,7 +55,6 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 │   └── bin
 │       ├── powermenu
 │       └── wifimenu
-├── .xinitrc
 └── .zshrc
 ```
 
@@ -80,5 +79,5 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 
 ### Fonts
 
-- JetBrainsMono Nerd Font
+- JetBrains Mono Nerd Font
 - Sarasa Mono (Fallback with CJK support)
