@@ -15,7 +15,7 @@ if not vim.loop.fs_stat(lazypath) then
     '--branch=stable', -- latest stable release
     lazypath,
   }
-end
+end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup("girv/plugins")
@@ -145,9 +145,15 @@ local on_attach = function(_, bufnr)
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, '[W]orkspace [L]ist Folders')
 
+  vim.keymap.set('v', '<C-f>', vim.lsp.buf.format, {silent = false, buffer = 0, desc = 'LSP: [F]ormat Selection'})
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-    vim.lsp.buf.format()
+    vim.lsp.buf.format({
+      range = {
+        ["start"] = vim.api.nvim_buf_get_mark(0, "<"),
+        ["end"] = vim.api.nvim_buf_get_mark(0, ">"),
+      }
+    })
   end, { desc = 'Format current buffer with LSP' })
 end
 
