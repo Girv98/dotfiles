@@ -13,10 +13,11 @@ for_window [class="^.*"] border pixel 2
 # class                 border  bground text    indicator child_border
 client.focused          #A7C080 #A7C080 #2D353B #A7C080   #A7C080
 client.focused_inactive #3D484D #2D353B #859289 #3D484D   #3D484D
-client.unfocused        #3D484D #2D353B #859289 #3D484D   #3D484D
+client.unfocused        #3D484D #2D353B #859289 #3D484D   #2B3339
 client.urgent           #E67E80 #E67E80 #2D353B #E67E80   #E67E80
 client.placeholder      #2D353B #2D353B #859289 #2D353B   #2D353B
 client.background       #2D353B
+
 
 # # Start XDG autostart .desktop files using dex. See also
 # # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -68,7 +69,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+z focus child
+# focus adjacent container
+bindsym $MOD+Tab focus next
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
@@ -118,7 +121,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 #------------------------------ Bindings -------------------------------
 
 # start terminal
-bindsym $mod+Return exec kitty # exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id kitty # exec i3-sensible-terminal
+# bindsym $mod+Shift+Return exec --no-startup-id kitty --float
 # kill focused window
 bindsym $mod+q kill
 # Rofi
@@ -138,7 +142,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 # reload configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# restart i3 inplace
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -171,6 +175,13 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+#----------------------------- Window Rules ----------------------------
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [class="Gimp"] floating enable
+for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
 
 #-------------------------------- Start --------------------------------
 
