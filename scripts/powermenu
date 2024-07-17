@@ -1,15 +1,32 @@
 #!/bin/sh
 
 uptime="`uptime -p | sed -e 's/up //g'`"
+host=`whoami`
 
-chosen=$(printf "  Power Off\n  Restart\n  Suspend\n  Hibernate\n  Log Out\n  Lock" | rofi -dmenu -i -p "" -mesg "Uptime: $uptime" )
+powroff="  Power Off"
+restart="  Restart"
+suspend="  Suspend"
+hibern8="  Hibernate"
+signout="  Log Out"
+locksys="  Lock"
+
+rofi_cmd() {
+	rofi -dmenu -i 																					  																		\
+	-p "$host"     																					  																		\
+	-mesg "Uptime: $uptime" 																		  																		\
+	-theme-str 'inputbar { background-color: @bg0; children: [ "textbox-prompt-colon", "prompt" ]; }' 																		\
+	-theme-str 'textbox-prompt-colon  { expand: false; str: ""; padding: 10px 17px 10px 14px; border-radius: 10px; background-color: @urgent-color; text-color: @bg0; }'   \
+	-theme-str 'prompt { padding: 10px; border-radius: 10px; background-color: @accent-color; text-color: @bg0; }'
+}
+
+chosen=$(printf "$powroff\n$restart\n$suspend\n$hibern8\n$signout\n$locksys" | rofi_cmd )
 
 case "$chosen" in
-	"  Power Off") poweroff ;;
-	"  Restart") reboot ;;
-	"  Suspend") systemctl suspend ;;
-	"  Hibernate") systemctl hibernate ;;
-	"  Log Out") i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' ;;
-	"  Lock") betterlockscreen -l blur;;
+	$powroff) poweroff ;;
+	$restart) reboot ;;
+	$suspend) systemctl suspend ;;
+	$hibern8) systemctl hibernate ;;
+	$signout) i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' ;;
+	$locksys) betterlockscreen -l blur;;
 	*) exit 1 ;;
 esac
