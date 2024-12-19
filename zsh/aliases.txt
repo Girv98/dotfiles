@@ -10,6 +10,9 @@ alias gs="git status"
 alias ga="git add"
 alias gp="git push"
 alias gm="git commit"
+alias gme="git commit --amend"
+alias gma="git commit --amend --no-edit"
+alias gpr="git pull --rebase"
 
 ### List
 alias lla="ls -la --color=auto --group-directories-first"
@@ -45,6 +48,7 @@ alias ...="cd ../.."
 alias .3="cd ../../.."
 alias .4="cd ../../../.."
 alias .5="cd ../../../../.."
+alias dot="cd $HOME/.dotfiles"
 ### alias cd "$(find -maxdepth 4 -name init.lua -type f -printf '%h\n')"
 
 findname() {
