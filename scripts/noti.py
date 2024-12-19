@@ -27,6 +27,7 @@ class Notification:
         secs  = int(ms // 1e6) % 60
 
         print(f"\t{self.appname}: {self.body}")
+        print(f"\t{self.summary}")
         print(f"\t{hours}h {mins}m {secs}s ago")
 
 
