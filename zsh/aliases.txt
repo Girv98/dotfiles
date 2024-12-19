@@ -13,9 +13,9 @@ alias gm="git commit"
 
 ### List
 alias lla="ls -la --color=auto --group-directories-first"
-alias ll="ls -l --color=auto --group-directories-first"
-alias lha="ls -ha --color=auto --group-directories-first"
-alias lh="ls -h --color=auto --group-directories-first"
+alias ll="ls -lh --color=auto --group-directories-first"
+alias lha="ls -lha --color=auto --group-directories-first"
+alias ls="ls --color=auto --group-directories-first"
 
 ### Configs
 alias c-dot="code $HOME/.dotfiles"
