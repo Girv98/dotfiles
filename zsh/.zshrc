@@ -5,7 +5,7 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/girv/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -15,7 +15,7 @@ compinit
 
 if [ -d ~/.local/bin ]
 then
-    PATH=$PATH:~/.local/bin
+    PATH=$PATH:$HOME/.local/bin
 fi
 
 # Prompt shamelessly appropriated from https://github.com/dikiaap/dotfiles/blob/master/.oh-my-zsh/themes/oxide.zsh-theme
@@ -68,15 +68,16 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 add-zsh-hook precmd vcs_info
 
 # TODO: Make aliases hotload
-source /home/girv/.config/zsh/aliases.txt
-source /home/girv/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh/aliases.txt
+source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.dotfiles/zsh/node-fix.zsh
 
 # Oxide prompt style.
 PROMPT=$'\n%n %{$oxide_limegreen%}%~%{$oxide_reset_color%} ${vcs_info_msg_0_}\n%(?.%{%F{white}%}.%{$oxide_red%})%(!.#.❯)%{$oxide_reset_color%} '
 
-
-
-neofetch
+export EDITOR=nvim
 
 # opam configuration
-[[ ! -r /home/girv/.opam/opam-init/init.zsh ]] || source /home/girv/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+neofetch
