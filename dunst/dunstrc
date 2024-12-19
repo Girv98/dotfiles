@@ -92,7 +92,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 2
 
     # Defines color of the frame around the notification window.
     # frame_color = "#aaaaaa"
@@ -164,7 +164,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "%a\n<b>%s</b>\n%b"
+    format = "<b>%s</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -229,7 +229,7 @@
     sticky_history = no
 
     # Maximum amount of notifications kept in history
-    history_length = 50
+    history_length = 100
 
     ### Misc/Advanced ###
 
