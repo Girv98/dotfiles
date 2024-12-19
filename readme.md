@@ -32,9 +32,7 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 │   ├── kitty
 │   │   └── kitty.conf
 │   ├── nvim
-│   │   ├── plugins
-│   │   │   └── ...
-│   │   ├── themes
+│   │   ├── lua/girv
 │   │   │   └── ...
 │   │   ├── init.lua
 │   │   └── lazy-lock.json 
@@ -68,6 +66,7 @@ My current (work in progress) Arch-i3 configuration. Colours based on [Everfores
 - i3
 - Kitty
 - Network Manager
+- nnn (Optional)
 - Nvim
 - Picom
 - Pipewire
