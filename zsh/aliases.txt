@@ -91,6 +91,7 @@ longup() {
 
 ### List installed pacman packages sorted by size
 alias packs="expac -s \"%-30n %m\" | sort -rhk 2 | less"
+alias hpacks="expac -H M '%-30n %+10m\t%w' | sort -rhk 2 | less"
 
 ### Misc
 alias cl="clear"
@@ -98,3 +99,14 @@ alias nv="nvim"
 alias nv.="nvim ."
 alias c="code"
 alias c.="code ."
+alias dush="du -sh"
+
+
+hist() {
+    bat $HOME/.histfile | rg $1
+}
+
+co() {
+    cd $1
+    code .
+}
