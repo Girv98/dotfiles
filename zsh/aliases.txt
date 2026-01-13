@@ -110,3 +110,8 @@ co() {
     cd $1
     code .
 }
+
+news() {
+    echo "🛎️ Lastest Arch news:"
+    curl -s https://archlinux.org/news/ | grep -Eo 'href="/news/[^"]+"' | head -n 5 | cut -d'"' -f2 | sed 's|^|- https://archlinux.org|'
+}
