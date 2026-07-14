@@ -45,7 +45,7 @@ oxide_reset_color="%f"
 FMT_UNSTAGED="%{$oxide_reset_color%} %{$oxide_orange%}●"
 FMT_STAGED="%{$oxide_reset_color%} %{$oxide_limegreen%}✚"
 FMT_ACTION="(%{$oxide_limegreen%}%a%{$oxide_reset_color%})"
-FMT_VCS_STATUS="on %{$oxide_turquoise%} %b%u%c%{$oxide_reset_color%}"
+FMT_VCS_STATUS=" on %{$oxide_turquoise%} %b%u%c%{$oxide_reset_color%}"
 
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' check-for-changes true
@@ -72,8 +72,12 @@ source $HOME/.config/zsh/aliases.txt
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.dotfiles/zsh/node-fix.zsh
 
+ERROR_CODE="%(?.%{$oxide_limegreen%}.%{$oxide_red%})%(?..[%?])%{$oxide_reset_color%}"
+PROMPT_ARR="%(?.%{$oxide_limegreen%}.%{$oxide_red%})%(?.❯.❯)%{$oxide_reset_color%}"
+
 # Oxide prompt style.
-PROMPT=$'\n%n %{$oxide_limegreen%}%~%{$oxide_reset_color%} ${vcs_info_msg_0_}\n%(?.%{%F{white}%}.%{$oxide_red%})%(!.#.❯)%{$oxide_reset_color%} '
+PROMPT=$'\n%n %{$oxide_limegreen%}%~%{$oxide_reset_color%}${vcs_info_msg_0_} $ERROR_CODE\n$PROMPT_ARR '
+# RPROMPT=$'%(?.%{$oxide_limegreen%}.%{$oxide_red%})%(?..[%?])%{$oxide_reset_color%}'
 
 export EDITOR=nvim
 
