@@ -78,6 +78,11 @@ PROMPT=$'\n%n %{$oxide_limegreen%}%~%{$oxide_reset_color%} ${vcs_info_msg_0_}\n%
 export EDITOR=nvim
 
 # opam configuration
-[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null
+
+
+# TIMEFMT=$'%J\n%U user\n%S system\n%P cpu\n%*E total' # DEFAULT
+TIMEFMT=$'cpu%\t%P\nuser\t%U\nsys\t%S\ntotal\t%E'
+TIMEFMT=$'user\t%U\t\tcpu%\t%P\nsys\t%S\t\ttotal\t%E'
 
 neofetch
