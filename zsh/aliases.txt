@@ -113,5 +113,10 @@ co() {
 
 news() {
     echo "🛎️ Lastest Arch news:"
-    curl -s https://archlinux.org/news/ | grep -Eo 'href="/news/[^"]+"' | head -n 5 | cut -d'"' -f2 | sed 's|^|- https://archlinux.org|'
+    curl -s https://archlinux.org/news/ | rg '.*href="(/news/[^"]+)".*' -r '$1' | head -n 5 | sed 's|^|- https://archlinux.org|'
+}
+
+nvfix() {
+    paru -Rdd nvidia-580xx-utils lib32-nvidia-580xx-utils nvidia-580xx-settings nvidia-580xx-dkms linux-firmware-nvidia
+    paru -S nvidia-580xx-utils lib32-nvidia-580xx-utils nvidia-580xx-settings nvidia-580xx-dkms linux-firmware-nvidia
 }
